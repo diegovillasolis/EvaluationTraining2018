@@ -38,13 +38,18 @@ public class Veterinary {
 
     }
 
-    public void search(int id) {
+    public Pet search(int id) {
+        Pet p = null;
         for(int i =0 ; i< pets.size(); i++){
             if(pets.get(i).getId() == id && pets.get(i).getShow())
             {
                 pets.get(i).setShow(false);
+                p = pets.get(i);
             }
         }
+        return p;
     }
 
+    public void updatePet(int id, Pet p) {
+    }
 }
